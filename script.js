@@ -1,31 +1,47 @@
+// Wellcome Function
+function wellcome(){
+  const userName=prompt("Please Enter Your Name");
+  if(userName){
+    alert(`Wellcome ${userName} our Count App`);
+  }
+}
+wellcome();
+
+
 // For count app
 let addBtn = document.querySelector(".add-btn");
 let subBtn = document.querySelector(".sub-btn");
 let line = document.querySelector(".line");
 let value = document.querySelector(".value");
-let reset = document.querySelector(".reset");
+let resetBtn = document.querySelector(".reset");
 let count = 0;
-addBtn.addEventListener("click", () => {
+// Add Function
+function addiction(){
   count++;
   line.innerText = "Your value is Incrimented";
   value.innerText = count;
-  value.style.backgroundColor = "#2f9e44";
-  line.style.backgroundColor = "#2f9e44";
-});
-subBtn.addEventListener("click", () => {
+  value.style.color = "#2f9e44";
+  line.style.color = "#2f9e44";
+}
+// substraction Function
+function sustraction(){
   count--;
   line.innerText = "Your value is Decrimented";
   value.innerText = count;
-  value.style.backgroundColor = "#e03131";
-  line.style.backgroundColor = "#e03131";
-});
-reset.addEventListener("click", () => {
+  value.style.color = "#e03131";
+  line.style.color = "#e03131";
+}
+// Reset Function
+function reset(){
   count = 0;
   value.innerText = 0;
   line.innerText = "Your value is Reset";
-  value.style.backgroundColor = "#eebefa";
-  line.style.backgroundColor = "#eebefa";
-});
+  value.style.color = "#eebefa";
+  line.style.color = "#eebefa";
+}
+addBtn.addEventListener("click",addiction);
+subBtn.addEventListener("click",sustraction);
+resetBtn.addEventListener("click",reset);
 
 // for color change
 const btn = document.querySelector(".color-btn");
